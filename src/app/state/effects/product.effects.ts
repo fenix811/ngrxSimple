@@ -6,7 +6,7 @@ import { ProductService } from '../../services/productService';
 
 @Injectable()
 export class ProductEffects {
-  @Effect()
+  @Effect({dispatch: false})
   getProducts$ = this.actions$.pipe(
     ofType<ProductActions>(ProductActionTypes.LoadProducts),
   );
