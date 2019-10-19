@@ -14,14 +14,12 @@ import {ProductEffects} from './state/effects/product.effects';
 import { ProductService } from './services/productService';
 import { QuickSearchProductComponent } from './quick-search-product/quick-search-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AsyncTestComponent } from './async-test/async-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Test1Component,
     QuickSearchProductComponent,
-    AsyncTestComponent
   ],
   imports: [
     BrowserModule,
