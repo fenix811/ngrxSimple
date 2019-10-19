@@ -17,4 +17,10 @@ export class ProductService {
     debugger;
     return this.http.get<IProduct[]>('api/product/getproducts');
   }
+
+  public searchProduct(text: string): Observable<IProduct[]> {
+    // tslint:disable-next-line: no-debugger
+    debugger;
+    return this.http.get<IProduct[]>('api/product/getproductsbyname/' + text);
+  }
 }

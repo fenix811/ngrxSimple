@@ -13,12 +13,14 @@ export const productReducers = (
   action: ProductActions
 ): IProductState => {
   switch (action.type) {
-    // case ProductActionTypes.GetUsersSuccess: {
-    //   return {
-    //     ...state,
-    //     products: action.payload
-    //   };
-    // }
+    case ProductActionTypes.LoadProductsSuccess: {
+      // tslint:disable-next-line: no-debugger
+      debugger;
+      return {
+        ...state,
+        Products: action.payload,
+      };
+    }
 
     default:
       return state;

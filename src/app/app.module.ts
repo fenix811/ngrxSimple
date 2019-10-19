@@ -12,15 +12,21 @@ import { EffectsModule } from '@ngrx/effects';
 import { appReducers } from './state/reducers/app.reducer';
 import {ProductEffects} from './state/effects/product.effects';
 import { ProductService } from './services/productService';
+import { QuickSearchProductComponent } from './quick-search-product/quick-search-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AsyncTestComponent } from './async-test/async-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Test1Component
+    Test1Component,
+    QuickSearchProductComponent,
+    AsyncTestComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([ProductEffects]),
